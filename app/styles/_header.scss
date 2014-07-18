@@ -1,0 +1,88 @@
+header {
+  background-color: $orange;
+  // @media(/*desktop*/){
+  //   height: 200px;
+  // }
+  @media($desktop) {
+    height: 200px;
+  }
+  padding: 35px 20px;
+  .logo {
+    display: inline-block;
+    float: left;
+  }
+  @extend .clearfix;
+}
+
+.menu-toggle {
+  display: none;
+  @media($mobile) {
+    float: left;
+    display: block;
+    height: 36px;
+    width: 51px;
+    background: url(../images/menu-button.png) 0 0 no-repeat;
+    overflow: hidden;
+    float: right;
+    &:active,
+    &:focus,
+    .expanded {
+      background-position: 0 -36px;
+    }
+  }
+}
+nav {
+  float: right;
+  display: inline-block;
+  overflow: hidden;
+
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+  }
+  li {
+    display: inline-block;
+    margin-left: 25px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  a {
+    color: $white;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+    &:active,
+    &:focus {
+      color: $white-ee;
+    }
+  }
+  @media($mobile) {
+    float: none;
+    display: block;
+    clear: both;
+    ul {
+      display: none;
+      width: 100%;
+      padding: 0;
+      margin-top: 20px;
+      background-color: $orange-d1;
+    }
+    li {
+      display: block;
+      margin: 0;
+      &:hover {
+        background-color: $orange-ba;
+      }
+      a {
+        display: block;
+        padding: 20px;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

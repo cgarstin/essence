@@ -1,31 +1,51 @@
 // bower:scss
 // endbower
+// 
 
-body {
-    background: #fafafa;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
+
+.clearfix {
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
 }
 
-.hero-unit {
-    margin: 50px auto 0 auto;
-    width: 300px;
-    font-size: 18px;
-    font-weight: 200;
-    line-height: 30px;
-    background-color: #eee;
-    border-radius: 6px;
-    padding: 60px;
-    h1 {
-        font-size: 60px;
-        line-height: 1;
-        letter-spacing: -1px;
-    }
+@import "colors";
+@import "breakpoints";
+@import "header";
+@import "tweets";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: $white-ee;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: $gray-33;
+}
+
+.grid {
+  margin: 0px auto;
+  @media($desktop) {
+    max-width: 700px;
+  }
+}
+
+.content {
+  max-width: 600px;
+  margin: 0 auto;
+  @media($desktop) {
+    margin-top: -100px;
+  }
+  background-color: $white-ee;
+  padding: 25px;
 }
 
 .browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
 }
